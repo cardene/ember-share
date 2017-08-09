@@ -11,7 +11,6 @@
 		font-family: courier;
 		padding: 3rem;
 		padding-top: 2rem;
-		/*border-bottom: solid;*/
 	}
 	th {
 		padding: 3rem;
@@ -35,8 +34,8 @@
 {{#each model as |sc|}}
 		<tr>
 			<td>{{#link-to "harvestloglist" sc.label sc.id}}{{#status-board title=sc.label}}{{/status-board}}{{/link-to}}</td>
-			{{#source-health sourceConfigId=sc.id}}
-			{{/source-health}}
+			<td>{{#source-health sourceConfigId=sc.id}}
+			{{/source-health}}</td>
 	</tr>
 {{/each}}
 </tbody>
